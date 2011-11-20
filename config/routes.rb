@@ -1,4 +1,18 @@
 Workbench::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/customer"
+
+  get "pages/tech"
+
+  get "pages/service"
+
+  get "pages/billing"
+
+  get "pages/admin"
+
+  get "pages/help"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
