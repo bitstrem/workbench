@@ -1,6 +1,7 @@
 Workbench::Application.routes.draw do
+  devise_for :users
+
    get "users/new"
-   match '/signup', :to => 'users#new'
    match '/admin', :to => 'pages#admin'
    match '/about',   :to => 'pages#about'
    match '/help',    :to => 'pages#help'

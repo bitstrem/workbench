@@ -3,11 +3,18 @@
 		<%=	link_to logo, root_path%>
         <nav class="round">
           <ul>
+			<div id= "user_nav">
+			 	<%if user_signed_in? %>
+					Signed in as <%= current_user.email%>. Not you?
+					<li><%=link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+				<%else%>
+					<li><%= link_to "Sign up", new_user_registration_path%></li> or 
+					<li><%= link_to "sign in", new_user_session_path%></li>
+				<%end%>
+			</div>
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "Help", help_path %></li>
 			<li><%= link_to "About", about_path %></li>
-			<li><%= link_to "Register", signup_path%>
-            <li><%= link_to "Sign in", '#' %></li>
           </ul>
         </nav>
       </header>

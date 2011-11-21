@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails'
 gem 'sqlite3'
-
+gem 'devise'
 group :development do
   gem 'rspec-rails'
 end

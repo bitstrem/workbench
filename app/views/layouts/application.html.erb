@@ -4,14 +4,20 @@
     <title><%= title %></title>
     <%= csrf_meta_tag %>
     <%= render :partial => 'layouts/stylesheets' %>
+	<%= javascript_include_tag :defaults %>
   </head>
   <body>
     <div class="container">
-      <%= render :partial => 'layouts/header' %>
+		<%= render :partial => 'layouts/header' %>
+		  <%flash.each do |name, msg|%>
+				<%= content_tag :div, msg, :id => "flash_#{name}"%>
+		 <% end %>
       <section class="round">
         <%= yield %>
       </section>
-	 <%= render :partial => 'layouts/footer' %>
+	<%if user_signed_in? %>
+		<%= render :partial => 'layouts/footer' %>
+	<%end%> 
     </div>
   </body>
 </html>
