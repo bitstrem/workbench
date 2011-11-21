@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WorkBench | <%= @title %></title>
+    <title><%= title %></title>
     <%= csrf_meta_tag %>
+    <%= render :partial => 'layouts/stylesheets' %>
   </head>
   <body>
-	 <h1>WorkBench App - <%=	@title%></h1>
-    <%= yield %>
+    <div class="container">
+      <%= render :partial => 'layouts/header' %>
+      <section class="round">
+        <%= yield %>
+      </section>
+	 <%= render :partial => 'layouts/footer' %>
+    </div>
   </body>
 </html>
