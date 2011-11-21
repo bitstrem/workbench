@@ -1,5 +1,7 @@
 Workbench::Application.routes.draw do
-  match '/admin', :to => 'pages#admin'
+   get "users/new"
+   match '/signup', :to => 'users#new'
+   match '/admin', :to => 'pages#admin'
    match '/about',   :to => 'pages#about'
    match '/help',    :to => 'pages#help'
    match '/customer', :to => 'pages#customer'
