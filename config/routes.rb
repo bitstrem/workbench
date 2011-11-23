@@ -1,4 +1,14 @@
 Workbench::Application.routes.draw do
+  resources :parts
+
+  resources :part_companies
+
+  resources :models
+
+  resources :types
+
+  resources :brands
+
   devise_for :users
 
    get "users/new"
