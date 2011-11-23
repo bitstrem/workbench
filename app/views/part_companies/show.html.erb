@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @part_company.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @part_company.address %>
+</p>
+
+<p>
+  <b>Archive:</b>
+  <%= @part_company.archive %>
+</p>
+
+
+<%= link_to 'Edit', edit_part_company_path(@part_company) %> |
+<%= link_to 'Back', part_companies_path %>

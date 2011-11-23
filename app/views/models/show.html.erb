@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Model num:</b>
+  <%= @model.model_num %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @model.type_id %>
+</p>
+
+<p>
+  <b>Brand:</b>
+  <%= @model.brand_id %>
+</p>
+
+<p>
+  <b>Archive:</b>
+  <%= @model.archive %>
+</p>
+
+
+<%= link_to 'Edit', edit_model_path(@model) %> |
+<%= link_to 'Back', models_path %>
